@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
   var roman string
@@ -9,6 +12,7 @@ func main() {
   // Taking input
   fmt.Print("Enter you Roman numeral: ")
   fmt.Scan(&roman)
+  roman = strings.ToUpper(roman)
 
   for i := 0 ; i < len(roman) ; i++ {
     if roman[i] == 'I' { decimal += 1 } else
