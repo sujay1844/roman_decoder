@@ -3,8 +3,13 @@ package main
 import "fmt"
 
 func main() {
-  roman := "MCMXLVII"
+  var roman string
   decimal := 0
+  
+  // Taking input
+  fmt.Print("Enter you Roman numeral: ")
+  fmt.Scan(&roman)
+
   for i := 0 ; i < len(roman) ; i++ {
     if roman[i] == 'I' { decimal += 1 } else
     if roman[i] == 'V' { decimal += 5 } else
